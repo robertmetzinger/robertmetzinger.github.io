@@ -1,0 +1,2107 @@
+:: StoryTitle
+Luxovola
+
+
+:: StoryData
+{
+  "ifid": "BAC8B2A1-BA3D-4E56-8150-4D69CE0CBC75",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "start": "0",
+  "tag-colors": {
+    "death": "red",
+    "abort": "orange",
+    "happy-end": "green"
+  },
+  "zoom": 0.3
+}
+
+
+:: 0 {"position":"1000,500","size":"100,100"}
+<div id="title-page">
+<<link "">>
+<<replace "#luxovola-layout">>\
+    <<timed 10ms t8n>>\
+        <<display "layout">>
+    <</timed>>
+    <<script>>
+    	document.getElementById('title-page').style.zIndex = 'auto'
+    <</script>>
+<</replace>>
+<<replace "#start-game-btn">>\
+    <<timed 2s t8n>>\
+        <<button [[START|1]]>><</button>>
+    <</timed>>
+<</replace>>
+<</link>>
+</div>
+<div class="title-screen">
+	<img id="title-img" src="images/luxovola.png">
+    <div id="start-game-btn-parent">
+    	<span id="start-game-btn"></span>
+    </div>
+</div>
+
+<<PlayTrack deep-space-adventure>>
+
+
+:: 1 {"position":"1150,500","size":"100,100"}
+<div class="content">\
+<<speech>>Welcome to the year 2205, a time of boundless ambition and curiosity that has propelled humanity into the vastness of space. Amidst the stars, Aetheria shines as a remarkable planet of captivating beauty. Its vibrant landscapes are adorned with an extraordinary flora and fauna, creating a kaleidoscope of colors. Life thrives here in perfect harmony, untouched by human hands. But Aetheria holds secrets that extend beyond its surface beauty. Below the ground lies a mysterious labyrinth of unexplored passages and hidden chambers, calling adventurers to uncover its secrets. These caves are said to house undiscovered species and mind-bending geological formations, offering untold wonders to those who dare to venture forth. Despite its riches, Aetheria's resources are not known to hold any significant commercial value. Preservation takes precedence over exploitation, as the guardians of the planet recognize the importance of safeguarding its untouched magnificence for future generations. Aetheria stands as a testament to the delicate balance between progress and preservation. It is a world where the ethereal and the terrestrial merge, where the thrill of discovery intertwines with the responsibility to protect. Welcome to Aetheria, where the echoes of the past and the promise of the future harmoniously unite.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|2]]>><</button>>
+</div>
+</div>
+
+
+:: 10 {"position":"2500,500","size":"100,100"}
+<div class="content">\
+<<speech>>On his way home, Miles thinks a lot about whether he should go to the caves or not. He is not exactly the biggest fan of dark, narrow places. Also, the incident on the game today annoys him so much. When he arrives home, his dad notices that something is bothering Miles. "Anything wrong Miles? You can talk with me about everything."<</speech>>\
+<div class="button-row">\
+	<<button [[continue|11]]>><</button>>
+</div>
+</div>
+
+
+:: 100 {"position":"3400,3300","size":"100,100"}
+<div class="content">\
+<<speech>>"Oh, I see. Of course you can go. I like that you are more open now. I am always here for you to talk."<</speech>>\
+<div class="button-row">\
+	<<button [[continue|101]]>><</button>>
+</div>
+</div>
+
+
+:: 101 {"position":"3550,3300","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Thanks Dad. I love you.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|102]]>><</button>>
+</div>
+</div>
+
+
+:: 102 {"position":"3700,3300","size":"100,100"}
+<div class="content">\
+<<speech>>At night Miles lies on his bed and thinks about all the things that happened recently. He turns his head over to his window and looks contentedly into the starry sky. He whistles softly. Two red shimmering ears appear outside of his window.<</speech>>\
+<div class="button-row">\
+	<<button [[end|END]]>><</button>>
+</div>
+</div>
+
+
+:: 11 {"position":"2650,500","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>No, there is nothing. Just a bit tired. Oh, by the way, I am staying at a friend's house tonight. Be back tomorrow.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|12]]>><</button>>
+</div>
+</div>
+
+
+:: 12 {"position":"2800,500","size":"100,100"}
+<div class="content">\
+<<speech>>In the dusk Miles walks to the entry of the caves. It's not far and of course, he brought a flashlight. When he arrives he sees Marah and two of her friends. And, oh no, there is also Brad. He looks at Miles challengingly.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|13]]>><</button>>
+</div>
+</div>
+
+
+:: 13 {"position":"2950,500","size":"100,100"}
+<div class="content">\
+<<speech false "Brad">>Look who's here. Did you get lost? You seriously can't be here to go into the cave with us. Aren't you scared of the dark?<</speech>>\
+<div class="button-row">\
+	<<button [[continue|14]]>><</button>>
+</div>
+</div>
+
+
+:: 14 {"position":"3100,500","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>Sorry Miles, I didn't know he was coming, too. It's okay, if you wanna leave.<</speech>>\
+<div class="button-row">\
+	<<button [[I go in the front|15A]]>><</button>>
+	<<button [[I go in the back|15B]]>><</button>>
+    <<button [[I go home|15C]]>><</button>>
+</div>
+</div>
+
+
+:: 15A {"position":"3250,400","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>No way I'm leaving. That's a piece of cake. Let me go in front.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|16]]>><<set $cave_front to true>><</button>>
+</div>
+</div>
+
+
+:: 15B {"position":"3250,600","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>If you are so really so great Brad, go ahead. I will be behind you. Watch out to not fall over your own feet and end up in a hole, genius.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|16]]>><<set $cave_front to false>><</button>>
+</div>
+</div>
+
+
+:: 15C {"position":"3100,300","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Yeah, I really don't want to spend my time with this jerk. I'm out.<</speech>>\
+<div class="button-row">\
+	<<button [[end|ABORTED]]>><</button>>
+</div>
+</div>
+
+
+:: 16 {"position":"3400,500","size":"100,100"}
+<div class="content">\
+<<speech>>They walk into the caves deeper and deeper. The tunnel is not as narrow as Miles had feared. But it's pitch dark outside of the flashlight's beam. After a while, just when Miles thinks that it's enough and wants to turn back, they hear a thumping noise in the distance. Curiously, they follow the direction of the sound. When they arrive at the place where the noise is the loudest, they realize it's coming from underneath the rocky tunnel floor on which they stand. Suddenly, with a big crack, the floor collapses.<</speech>>\
+<div class="button-row">\
+	<<if $cave_front is true>>
+		<<button [[continue|17A]]>><</button>>
+    <<else>>
+    	<<button [[continue|17B]]>><</button>>
+    <</if>>
+</div>
+</div>
+
+<<PlayTrack stairs-into-the-unknown>>
+
+
+:: 17A {"position":"3400,900","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>Miles and the other teenagers fall hard, but only a short distance onto the floor below. This tunnel looks different than the one they were walking in for the whole time. It is not natural, but constructed and enlightened by electric lamps. Miles realizes there are two broad men standing right next to them. They were clearly working here at the tunnel construction just before the intermediate ceiling collapsed. The men look grim at the teenagers and pull out guns, which they point at Miles and the others. Under some grunted commands, the teenagers are being escorted to an elevator.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|18A]]>><</button>>
+</div>
+</div>
+
+
+:: 17B {"position":"3400,1100","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>In the back of the group Miles notices the rumble in the floor and manages to jump away from the spreading crack in the floor. The other teenagers fall through. He hears them moaning, so they can not have fallen deep. Miles sees electric light coming out of the hole. Before he comes close, he hears deep man voices yelling from downstairs. He hides in the shadow. When he perceives steps moving away, he risks a look through the crack. The tunnel below is not natural, but constructed. And he sees Marah and the others being escorted by two broad men with guns. Miles waits a few seconds until they are out of reach. Then he jumps down into the tunnel and follows the direction in which his friends disappeared. He cautiously peeks out from behind a corner and watches as the men order his friends into an elevator. Miles recons using the elevator would be a bad idea without knowing where it will end up, he would potentially run straight into the captivators' arms. Instead, he discovers a natural tunnel close to the elevator, that leads downwards. He decides to go this way while using his flashlight. After a while walking deeper and deeper underground, the tunnel ends in an enormous cave. He is on a rock ledge about fifteen meters above the ground and can see everything that is going on inside the cave. Mystical glowing crystals grow on the walls and the ceiling. About a dozen men work here mining those crystals. Miles is baffled , when he notices four giant bats flying through the cave. They are so big that the men ride on them to get the crystals on the wall and ceiling. The bats move effortlessly through the air, which makes them look elegant as well as strong. Miles is so fascinated by the impressive creatures, that it takes a while until he spots his friends on the ground, listening to a man. He has a fierce look and a mighty beard. With his broad muscular shoulder cross and his camouflage coverall he looks like a soldier. Miles is too far away to hear what the man says.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|18B]]>><</button>>
+</div>
+</div>
+
+
+:: 18A {"position":"3250,900","size":"100,100"}
+<div class="content">\
+<<speech>>The elevator takes them far underground. Finally, they arrive in a giant cave, that is illuminated by big spotlights. Mystical glowing crystals grow on the walls and the ceiling. About a dozen men work here mining those crystals. Miles is baffled , when he notices four giant bats flying through the cave. They are so big that the men ride on them to get the crystals on the wall and ceiling. The bats move effortlessly through the air, which makes them look elegant as well as strong. Miles is so fascinated by the impressive creatures that he almost forgets that he is a captive of the men who are flying on the bats' backs. One man, riding on the biggest bat, that has silvery shimmering fur, lands next to them. The bat lies down on its belly, so that the man can get out of the saddle on its back. He has a fierce look and a mighty beard. With his broad muscular shoulder cross and his camouflage coverall he looks like a soldier.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|19A]]>><</button>>
+</div>
+</div>
+
+
+:: 18B {"position":"3250,1100","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>Miles sees one of the bats flying towards him from the distance. At once, he hides in the tunnel from where he came. The bat has beautiful, dark violet fur with a white neck. It lands on the rock ledge and lies down on its belly. The man, who was riding on its back, gets out of the saddle and walks to a place, where glowing crystals sprout from the wall. The bat stays behind and does not move. Miles looks into its pretty, but expressionless eyes. He notices that it wears a mechanical collar around its neck, that has a red blinking light. It dawns on him, that the bats only obey the men, because of those collars. Miles makes sure the man taking the crystals from the wall is not paying attention and sneaks up to the bat. He climbs on the saddle and leans over to its neck. With the click on a button, he opens the collar. At once, the bat seems to come to its senses and stands up. Now the man, notices Miles and yells at him. He pulls his gun and points in Miles' direction. But the bat flaps with its wings and rises into the air. The other men in the cave are also alarmed and try to shoot Miles and the bat. It escapes the gunshots with quick turns. Miles shakes around and his flashlight falls out of his pocket. The bat flies high into a hole in the wall. From one moment to the other Miles is shrouded in darkness.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|24]]>>
+    	<<set $bat to "Ava">>
+        <<set $bat_parent to "Mum">>
+        <<set $bat_gender_subject to "she">>
+        <<set $bat_gender_object to "her">>
+        <<set $other_bat to "Ares">>
+        <<set $other_bat_parent to "Dad">>
+        <<set $other_bat_gender_subject to "he">>
+        <<set $other_bat_gender_object to "him">>
+        <<set $other_bat_looks to "silvery shimmering fur">>
+    <</button>>
+</div>
+</div>
+
+
+:: 19A {"position":"3100,900","size":"100,100"}
+<div class="content">\
+<<speech false "Paxton">>Hello children, my name is Paxton. You ended up in the wrong place. This is anything but a playground. We are working here with heavy machines, very dangerous.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|20A]]>><</button>>
+</div>
+</div>
+
+
+:: 2 {"position":"1300,500","size":"100,100"}
+<div class="content">\
+<<speech>>The students of Etherhaven High School have sports class and play aeroball, a typical game in Aetheria. Each student is equipped with a high-tech glider on his back, that enables them to fly through the air in astonishing elegance inside an open stadium that integrates into the stunning aetherian landscape, filled with natural obstacles. Miles, a slim but athletic 15-year-old boy, stands out amongst the students as he wears special bright glasses. He gets the ball, gracefully outplays two opponents and is about to score a spectacular goal. But before he can take the shot, he gets tackled hard in his blindside by another student, Brad. Miles hits the ground and loses his glasses. His vision becomes so dark that he barely sees anything. Helplessly he searches for his glasses until he finds them. He puts them on and sees a bunch of people standing above him. Brad looks down at him intimidatingly with his beefy build and grins in satisfaction. Some of his own team members grumble in an annoyed tone that they lost the game because of Miles' solo run. His friend Marah appears in the crowd and wants to help him up. Because he doesn’t want to seem weak, Miles gets up by himself and gives Brad an angry glance. The teacher terminates the class and the students go to change their clothes in the changing rooms. Miles feels humiliated and tries to get away as fast as possible. When he is about to leave the changing room, Brad approaches him.<</speech>>\
+<div class="button-row">\
+	<<button [["continue"|3]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack space-atmospheric-background>>
+
+
+:: 20A {"position":"2950,900","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>You are mining the crystals. That's illegal! And you are using these poor bats to do your dirty work. You are criminals!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|21A]]>><</button>>
+</div>
+</div>
+
+
+:: 21A {"position":"2800,900","size":"100,100"}
+<div class="content">\
+<<speech false "Paxton">>You seem to be a smart child. Correct, it's not legal what we are doing here, but it's very profitable. And yes, we let these animals work for us. Not out of their free will of course, they are wild beasts. But, we found a way to make them obey. See, this collar on its neck here? This is the secret to our success. It stimulates their brain in a way, that surpressed their instincts. And just like that they listen to our commands like tiny little lapdogs. And so should you. I am not sure yet, what I want to do with you, but in any case you should not cause any trouble. I am not a very considerate man... Maybe you could work for us. Especially you, big guy, you look like you can carry some rocks. And what about - <</speech>>\
+<div class="button-row">\
+	<<button [[continue|22A]]>><</button>>
+</div>
+</div>
+
+
+:: 22A {"position":"2650,900","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>Suddenly, a large rock comes loose from the cave wall behind Paxton and falls to the ground with an enormous crash. Paxton flinches and all the men's attention is on the impact site. Miles looks around and spots a hole in the wall that seems to lead out from here and is in reaching distance. He could use the moment of distraction to run away. Brad, who looked extremely scared during Paxton's speech, seems to have a similiar idea. He starts running, but in a different direction than Miles had planned to. He gets only a few meters far, until Paxton regains his composure and pulls his gun. He points it at Brad, his finger is at the trigger. Miles watches the action from a couple steps away, still with the thought in his mind of running for the exit.<</speech>>\
+<div class="button-row">\
+	<<button [[attack Paxton|23A]]>><</button>>
+    <<button [[run away|23A2]]>><</button>>
+</div>
+</div>
+
+
+:: 23A {"position":"2500,800","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>Miles jumps at Paxton with all his power and tackles him right before he pulls the trigger. They both crash into the bat, which was unperturbedly lying right next to them for the whole time. An uncontrolled shot emerges from the rifle. It hits the bat at the mechanical collar. Sparks and small flashes of light shoot from the collar and at once the bat seems to come to its senses. It stands up and Miles notices that he is stuck in the bat's saddle. It makes a few clumsy steps while Miles has no other choice than walking next to it, trying to get free from the saddle. Then the bat spreads its wings and flaps so powerful that it instantly takes off from the ground several meters. Miles dangles from the side of the bat's body and must hold on now to not fall off. His flashlight falls out of his pocket. He pulls himself up, so he sits on the saddle properly. He sees Marah, Brad and the others looking up to him. Then the men start shooting at Miles and the bat. It escapes the gunshots and flies high into a hole in the wall. From one moment to the other Miles is shrouded in darkness.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|24]]>>
+    	<<set $bat to "Ares">>
+        <<set $bat_parent to "Dad">>
+        <<set $bat_gender_subject to "he">>
+        <<set $bat_gender_object to "him">>
+        <<set $other_bat to "Ava">>
+        <<set $other_bat_parent to "Mom">>
+        <<set $other_bat_gender_subject to "she">>
+        <<set $other_bat_gender_object to "her">>
+        <<set $other_bat_looks to "beautiful, dark violet fur with a white neck">>
+    <</button>>
+</div>
+</div>
+
+
+:: 23A2 {"position":"2500,1000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>Miles runs to the exit. Behind his back, he hears a shot from Paxton's Laser rifle, then a scream. He looks around and sees Brad lying motionless on the ground. Marah screams in shock. Miles looks at Paxton and sees the barrel of the rifle pointed at him. Then a red flash and then darkness.<</speech>>\
+<div class="button-row">\
+	<<button [[end|DEATH]]>><</button>>
+</div>
+</div>
+
+
+:: 24 {"position":"2350,900","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>They fly through the dark tunnels for a long while. The bat is fast and Miles needs to hold on firmly to not fall from its back.  He is used to flying and is even a talented pilot, but on the bat he has no control like with his aeroball glider. Finally, they reach another cave and the bat lands. Miles climbs down from its back onto solid rock and lies down. The events of the day had cost him all his energy. Utterly exhausted, Miles falls asleep. When he wakes up, he is alone. Moonlight shines into the cave. Now, he is able to see how gigantic the cave is and that he is on a small plateau high above the ground with no escape. This cave is covered in crystals that magically glow in the moonlight. Miles looks around fascinated.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|25]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack reflected-light>>
+
+
+:: 25 {"position":"2200,900","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Wow<</speech>>\
+<div class="button-row">\
+	<<button [[continue|26]]>><</button>>
+</div>
+</div>
+
+
+:: 26 {"position":"2050,900","size":"100,100"}
+<div class="content">\
+<<speech>>The moment he speaks, the crystals in front of him light up and a wave of light spreads out in a circle over the crystalline wall, as if a drop of water had hit the surface of a lake. The light looks so mesmerizingly different than everything he has ever seen. Out of a feeling of curiousity, he takes off his glasses and is shocked when he is still able to see the illuminated crystals. Excitedly, he tries out different words and sounds and observes the effects on the crystals. He finds that high whistles work best to produce brighter light on the crystals. He can also see the structure of the wall very well, like he could sense every little bump on the rocky surface.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|27]]>><</button>>
+</div>
+</div>
+
+
+:: 27 {"position":"1900,900","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>The bat returns. Though Miles can’t hear the bat making any sound, it causes far stronger and brighter waves on the crystals than Miles’ best attempt. He remembers that bats can perceive their surroundings through ultrasonic. The bat lands next to him and reveals some fruits in its claws. It drops them at Miles' feet and looks at him expectantly.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|28]]>><</button>>
+</div>
+</div>
+
+
+:: 28 {"position":"1750,800","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Well, thank you. I am not sure, if I can eat them... Hm, okay let me try.... Oh, it's delicious!<</speech>>\
+<div class="button-row">\
+	<<if $bat eq "Ares">>
+		<<button [[continue|29]]>><</button>>
+    <<else>>
+    	<<button [[continue|30]]>><</button>>
+    <</if>>
+</div>
+</div>
+
+
+:: 29 {"position":"1750,1000","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Hey, you still have that broken collar on your neck. Let me help you get rid of that thing... There you go, much better.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|30]]>><</button>>
+</div>
+</div>
+
+
+:: 3 {"position":"1450,500","size":"100,100"}
+<div class="content">\
+<<speech false "Brad">>What's the matter, Miles? Can't handle a little competition? Maybe you should stick to the sidelines if you can't handle light body contact. It's just a game, man. No need to cry about it.<</speech>>\
+<div class="button-row">\
+	<<button [[Avoid confrontation|4A]]>><</button>>
+	<<button [[Talk back|4B]]>><</button>>
+</div>
+</div>
+
+
+:: 30 {"position":"1600,900","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>So, I am Miles. Nice to meet you. You have a pretty nice home. Love the lighting. Is there anyone you're sharing it with? Friends, family or -<</speech>>\
+<div class="button-row">\
+	<<button [[continue|31]]>><</button>>
+</div>
+</div>
+
+
+:: 31 {"position":"1450,900","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>Suddenly, the bat leaps forward toward Miles, grabs him by the shoulders with its claws, and lifts him into the air. Maybe he said something wrong? The bat carries him down from the plateau and sets him down on the ground of the cave. A few meters in front of him sits a younger bat with silvery fur and red shimmering ears, that seem a little too big for it and make it look goofy. The adult bat goes over to the young one and cleans its head with its tongue.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|32]]>><</button>>
+</div>
+</div>
+
+
+:: 32 {"position":"1300,900","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Oh, I see it's your child! Hello, nice to meet you! I'm Miles.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|33]]>><</button>>
+</div>
+</div>
+
+
+:: 33 {"position":"1150,900","size":"100,100"}
+<div class="content">\
+<<speech false "Dr. Malone">>Hello Miles, I'm Dr. Malone.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|34]]>><</button>>
+</div>
+</div>
+
+
+:: 34 {"position":"1000,900","size":"100,100"}
+<div class="content">\
+<<speech>>The voice comes from behind and gives Miles a shock. He turns around and sees a tall and athletic man with a strong, sturdy build. He looks at Miles from under his fedora hat with piercing eyes.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|35]]>><</button>>
+</div>
+</div>
+
+
+:: 35 {"position":"850,900","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Who are you? Are you one of those men, who mine the crystals? The ones who still have my friends captured? Don't come closer!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|36]]>><</button>>
+</div>
+</div>
+
+
+:: 36 {"position":"850,1400","size":"100,100"}
+<div class="content">\
+<<speech false "Dr. Malone">>Well, I kinda am. It's complicated, let me explain.<</speech>>\
+<div class="button-row">\
+	<<button [[trust Dr. Malone|53]]>><</button>>
+	<<button [[run away|37]]>><</button>>
+</div>
+</div>
+
+
+:: 37 {"position":"1000,1400","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>No chance. I saw what you are doing. You won't get me!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|38]]>><</button>>
+</div>
+</div>
+
+
+:: 38 {"position":"1150,1400","size":"100,100"}
+<div class="content">\
+<<speech>>Miles runs away. He finds a tunnel at ground level and leaves the cave. There is only a tiny glimpse of moonlight that shines into the tunnel through some openings here and there. It is just enough for Miles to be able to see his feet and walk. It doesn't take long until the tunnel ends in a small cave, that seems to consist only of crystals. Even with the tiny amount of moonlight the crystals shines relatively bright. He inspects the cave, but doesn't find another tunnel. It's a dead end. He sits down on a crystal formation to rest for a bit. Suddenly the formation starts to move and Miles jumps up. There is no explanation for why the crystals move other than they became sentient. Stunned, Miles watches as the crystals start to form a face. He must be dreaming, but it feels very real. Suddenly the crystal face opens its mouth and starts to talk.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|39]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack otherwoldly-orchestra>>
+
+
+:: 39 {"position":"1300,1400","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"Who is disturbing me in my sleep? A little human? Your kind has been disturbing this place for a while now. Reckless and cruel is what you are. I am the guardian of these caves and it's time for the nature to take back what is ours and eliminate this disease called humans. I will start with you."<</speech>>\
+<div class="button-row">\
+	<<button [[continue|40]]>><</button>>
+</div>
+</div>
+
+
+:: 40 {"position":"1450,1400","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Wait, please. I am not part of this group of people that destroys your home. I am not reckless and cruel. Let me go, please!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|41]]>><</button>>
+</div>
+</div>
+
+
+:: 41 {"position":"1600,1400","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"Well, you are a considerate being, you say? Someone who cares and pays attention to the world in which he lives. I can respect that. But you must prove your worthiness. Answer two riddles and you will be blessed with my power. Answer one and I will let you go. Fail at both and you will never leave this cave again."<</speech>>\
+<div class="button-row">\
+	<<button [[continue|42]]>><</button>>
+</div>
+</div>
+
+
+:: 42 {"position":"1750,1400","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Fine, I will answer your riddles.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|43]]>><</button>>
+</div>
+</div>
+
+
+:: 43 {"position":"1900,1400","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"First riddle: I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?"<</speech>>\
+<div>\
+	<input type="text" id="riddle-1" name="riddle-1"
+    	placeholder="abcd"
+		maxlength="4">
+</div>\
+<div class="button-row">\
+	<<button "answer">>
+    	<<set $answer1 to "">>
+    	<<script>>
+        	State.active.variables.answer1 = $('#riddle-1')[0].value.toLowerCase();
+        <</script>>
+    	<<if $answer1 eq "echo">>
+			<<goto [[44A]]>>
+            <<set $correctAnswers to 1>>
+		<<else>>
+			<<goto [[44B]]>>
+            <<set $correctAnswers to 0>>
+		<</if>>
+    <</button>>
+</div>
+</div>
+
+
+:: 44A {"position":"2050,1300","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"Correct."<</speech>>\
+<div class="button-row">\
+	<<button [[continue|45]]>><</button>>
+</div>
+</div>
+
+
+:: 44B {"position":"2050,1500","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"Wrong. The answer to this riddle is 'echo'. "<</speech>>\
+<div class="button-row">\
+	<<button [[continue|45]]>><</button>>
+</div>
+</div>
+
+
+:: 45 {"position":"2200,1400","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"Second riddle: I can fill a room without occupying space. What am I?"<</speech>>\
+<div>\
+	<input type="text" id="riddle-2" name="riddle-2"
+    	placeholder="abcde"
+		maxlength="5">
+</div>\
+<div class="button-row">\
+	<<button "answer">>
+    	<<set $answer2 to "">>
+    	<<script>>
+        	State.active.variables.answer2 = $('#riddle-2')[0].value.toLowerCase();
+        <</script>>
+    	<<if $answer2 eq "light">>
+        	<<set $correctAnswers to $correctAnswers + 1>>
+            <<goto [[46A]]>>
+        <<else>>
+        	<<goto [[46B]]>>
+		<</if>>
+    <</button>>
+</div>
+</div>
+
+
+:: 46A {"position":"2350,1300","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"Correct."<</speech>>\
+<div class="button-row">\
+	<<button [[continue|47]]>><</button>>
+</div>
+</div>
+
+
+:: 46B {"position":"2350,1500","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"Wrong. The answer to this riddle is 'light'. "<</speech>>\
+<div class="button-row">\
+	<<button [[continue|47]]>><</button>>
+</div>
+</div>
+
+
+:: 47 {"position":"2500,1400","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"You answered $correctAnswers riddle(s) correctly."<</speech>>\
+<div class="button-row">\
+	<<button "continue">>
+        <<if $correctAnswers eq 2>>
+			<<goto [[48A]]>>
+		<<elseif $correctAnswers eq 1>>
+			<<goto [[48B]]>>
+        <<else>>
+        	<<goto [[48C]]>>
+		<</if>>
+    <</button>>
+</div>
+</div>
+
+
+:: 48A {"position":"2650,1550","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"I will give you my blessing. When you are in a moment of need inside these caves, trust the power of the crystals."<</speech>>\
+<div class="button-row">\
+	<<button [[continue|49]]>><<set $blessing to true>><</button>>
+</div>
+</div>
+
+
+:: 48B {"position":"2650,1400","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"I will let you go."<</speech>>\
+<div class="button-row">\
+	<<button [[continue|49]]>><<set $blessing to false>><</button>>
+</div>
+</div>
+
+
+:: 48C {"position":"2650,1250","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"You failed my test. Humans are unworthy. This is your end." The guardian hits Miles with a giant stone paw and he instantly loses his consciousness.<</speech>>\
+<div class="button-row">\
+	<<button [[end|DEATH]]>><</button>>
+</div>
+</div>
+
+
+:: 49 {"position":"2800,1475","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/crystal beast.png'">\
+</div>\
+<<speech true>>"You proved yourself worthy. The only other human I have met who has proven himself worthy is Dr. Malone. He too, has a good heart, trust him."<</speech>>\
+<div class="button-row">\
+	<<button [[continue|50]]>><</button>>
+</div>
+</div>
+
+
+:: 4A {"position":"1600,400","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>I'm done wasting my breath on you. Enjoy your hollow victories. I'm out.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|5A]]>><</button>>
+</div>
+</div>
+
+
+:: 4B {"position":"1600,600","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Oh, I see. So you think cheap shots and dirty plays are what make you a real athlete, huh? Maybe you're just too scared to face me fair and square. Keep playing dirty, Brad, and see how far it gets you.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|5B]]>><</button>>
+</div>
+</div>
+
+
+:: 50 {"position":"2950,1475","size":"100,100"}
+<div class="content">\
+<<speech>>Miles leaves the guardian's cave and walks back through the tunnel. He arrives in the cave, where he left Dr. Malone and the bats.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|51]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack reflected-light>>
+
+
+:: 51 {"position":"3100,1475","size":"100,100"}
+<div class="content">\
+<<speech false "Dr. Malone">>Oh there you are. Wait, did you meet the cave guardian? And you survived? Fascinating. It must have found you worthy.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|52]]>><</button>>
+</div>
+</div>
+
+
+:: 52 {"position":"3100,1700","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Yes it did. And it told me to trust you. So, I am ready to listen to your explanations now.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|54]]>><</button>>
+</div>
+</div>
+
+
+:: 53 {"position":"850,1800","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Okay, explain then.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|54]]>><</button>>
+</div>
+</div>
+
+
+:: 54 {"position":"1000,1800","size":"100,100"}
+<div class="content">\
+<<speech false "Dr. Malone">>Okay, don't worry. We are on the same side. Like I said, I am Dr. Malone. And by the way, these bats here are my friends. The young one is Opal and this is her $bat_parent $bat. Opal's $other_bat_parent $other_bat is still held captive by the mining group. I am a former member of that group. Actually I am a geologist and have been studying these caves for years. I was part of a science team, until all our funds have been cancelled. It was frustrating, but I didn't want to give up. When Paxton, the leader of the mining group, offered to provide me with the resources to continue my research, I was so happy that I accepted to assist him in his illegal mining operations. He needed me to find the suitable places for the works, considering the yield and safety. I knew it was wrong, but I figured they would do it anyway, so I could at least make sure the animals were affected as little as possible. The bats are the main reason why these caves mean so much to me. You have probably also noticed that they are very intelligent and sensitive animals. I hoped it wouldn't disturb them too much in their natural habitat. But I was wrong. One day, when a bat appeared at the mine and caused trouble, Paxton wanted to shoot it. I managed to stop him and offered to find a solution. I developed the collars that would allow us to control the bats. It worked so well that Paxton used the bat for mine work. Worse, he wanted to capture more bats to increase profits. I deeply regretted my actions and when they were about to capture Ares and Ava, I got in Paxton's way. We fought, but he was stronger than me and left me here in this cave. They captured Ares and Ava, but Opal was fortunately able to hide. I was injured and could only survive thanks to Opal's help. However, she is too small to carry me. So I couldn't leave this place. Now that Ares is here, we can both escape. I want to make up for what I have done. Let me help you free your friends and the bats.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|55]]>><</button>>
+</div>
+</div>
+
+
+:: 55 {"position":"1000,2000","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>I understand. I can see you really mean it. And I need your help. It's a deal. Together we will save them. But how are we going to do that?<</speech>>\
+<div class="button-row">\
+	<<button [[continue|56]]>><</button>>
+</div>
+</div>
+
+
+:: 56 {"position":"1150,2000","size":"100,100"}
+<div class="content">\
+<<speech false "Dr. Malone">>Thanks for trusting me. It won't be easy, but our friends here will help us. You need to learn how to properly ride on Opal. Then we can fly to the mine and save everyone.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|57]]>><</button>>
+</div>
+</div>
+
+
+:: 57 {"position":"1300,2000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>They immediately start the training. Dr. Malone explains Miles how to use his body to tell Opal which movement she should do. Miles is confident because he has experience in flying thanks to aeroball practice. But in his first attempts he struggles a lot. He is unfamiliar with this kind of body communication and can't get Opal to follow his lead. After several attempts Miles wants to give up.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|58]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack adventure-travel>>
+
+
+:: 58 {"position":"1450,2000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true "Dr. Malone">>Miles, you need to listen to Opal as well as she listens to you. Trust is the key, when working as a team. Don't try to do your own thing. Work together, then you can make it.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|59]]>><</button>>
+</div>
+</div>
+
+
+:: 59 {"position":"1600,2000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>Miles tries to apply Dr. Malone's advice. More and more, he and Opal build up a connection. After a while, they fly through the crystal cave doing turns and spins. Dr. Malone is pleased and suggests to finish the training and gather new energy for tomorrow. Miles is tired, but he feels they can achieve even more, if they continue with the training.
+<</speech>>\
+<div class="button-row">\
+	<<button [[finish training|62]]>><<set $special_move to false>><</button>>
+    <<button [[continue training|60]]>><</button>>
+</div>
+</div>
+
+
+:: 5A {"position":"1750,400","size":"100,100"}
+<div class="content">\
+<<speech>>Miles leaves the changing room and goes to his locker. Soon after, Marah comes by.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|6A]]>><</button>>
+</div>
+</div>
+
+
+:: 5B {"position":"1750,600","size":"100,100"}
+<div class="content">\
+<<speech>>Brad is furious and pushes Miles. He almost falls over, but then jumps back at Brad and the situation is about to escalate. Suddenly the sports teacher appears and yells at them to stop fighting. They give each other an angry glance and go their ways. Outside in the hallway, Marah waits for him.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|6B]]>><</button>>
+</div>
+</div>
+
+
+:: 60 {"position":"1750,2100","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>Miles and Opal continue with the training. They manage to fly faster and more skillful with every minute. They practice turns, spins and nosedives. It's like they have a mind connection. Finally, they do a nosedive combined with spinning like a drill, which is the fastest move they learned. Miles is now fully ecstatic and eager to learn even more special moves. Dr. Malone is very impressed, but he urges Miles to rest now.<</speech>>\
+<div class="button-row">\
+	<<button [[finish training|62]]>><<set $special_move to true>><</button>>
+    <<button [[continue training|61]]>><</button>>
+</div>
+</div>
+
+
+:: 61 {"position":"1600,2200","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>Miles can't stop practicing. He is in a frenzy and pushes Opal to fly faster and faster. The maneuvers become riskier from time to time. Dr. Malone is concerned and yells at Miles to stop. But he can't hear him anymore. Another spin, another turn, he lost all reason. He flies through a narrow formation of rock pillars dodging every single pillar only by a hair's breadth. Then he brushes one pillar with his arm and loses control. He flings around, slips from Opal's back and crashes straight into a boulder.<</speech>>\
+<div class="button-row">\
+	<<button [[end|DEATH]]>><</button>>
+</div>
+</div>
+
+
+:: 62 {"position":"1750,1900","size":"100,100"}
+<div class="content">\
+<<speech>>They finsh the training. Miles feels brilliant about the flying with Opal. They built up a strong connection. $bat brought some fruits and vegetables, that they can eat for dinner. After that Miles asks Dr. Malone about the crystals.
+<</speech>>\
+<div class="button-row">\
+	<<button [[continue|63]]>><</button>>
+</div>
+</div>
+
+
+:: 63 {"position":"1900,2000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/hand holding crystal.png'">\
+</div>\
+<<speech true "Dr. Malone">>The crystals reflect light, especially moonlight, in a more concentrated way than normal objects. We discovered a way to use them as energy amplifier in technical devices. Therefore, the mining group can make money out of them. But they are also sensitive to high tones, like ultrasonic. Bats use ultrasonic to orientate themselves, it is called echolocation.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|64]]>><</button>>
+</div>
+</div>
+
+
+:: 64 {"position":"2050,2000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/hand holding crystal.png'">\
+</div>\
+<<speech true "Miles">>Can humans learn echolocation? I feel like I have some sense for it.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|65]]>><</button>>
+</div>
+</div>
+
+
+:: 65 {"position":"2200,2000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/hand holding crystal.png'">\
+</div>\
+<<speech true "Dr. Malone">>Well, certainly not like the bats. But some people actually learned it to a limited extent. Of course, this requires an extensive amount of practice. Who knows, perhaps you will learn it some day.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|66]]>><</button>>
+</div>
+</div>
+
+
+:: 66 {"position":"2350,2000","size":"100,100"}
+<div class="content">\
+<<speech>>They decide to sleep and rescue Miles’ friends the next day. Miles lays on his back, whistling softly and looking at the echo on the crystals until he falls asleep.
+<</speech>>\
+<div class="button-row">\
+	<<button [[continue|67]]>><</button>>
+</div>
+</div>
+
+
+:: 67 {"position":"2500,2000","size":"100,100"}
+<div class="content">\
+<<speech>>The next day, they fly all the way to the mine through the tunnels. Miles on Opal's back feels much more comfortable now, than before when he flew through these tunnels the first time. The darkness does not bother him anymore and he tries to orientate himself as good as possible. Dr. Malone flies on the back of $bat. He clearly is an experienced pilot and has a good connection to $bat_gender_object. When they arrive, they first stop at the entry to the mine and observe the situation. The teenagers are guarded by the two men, who found them after breaking through the ceiling. Paxton, on a black bat, flies circles above the heads of his troops checking that everyone is doing their work right. Three other men ride on bats to reach the crystals on the walls. There are two brown bats and $other_bat, Opal's $other_bat_parent, who has $other_bat_looks. All the bats wear the control collar. They don't move as gracefully as Opal and $bat, who are free.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|68]]>><</button>>
+</div>
+</div>
+
+
+:: 68 {"position":"2650,2000","size":"100,100"}
+<div class="content">\
+<<speech>>Miles and Malone plan how they will start their attack at the mine. They figure it's most effective to use the moment of surprise and simultaneously ambush Paxton and the other men on the bats as well as the guards on the ground. Miles will do one part, while Malone does the other one.<</speech>>\
+<div class="button-row">\
+	<<button [[attack guards|69A]]>><</button>>
+    <<button [[attack Paxton|69B]]>><</button>>
+</div>
+</div>
+
+
+:: 69A {"position":"2950,1900","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>They wait a while for the perfect moment to perform their ambush. Dr. Malone gives the command and they both shoot off into the mine. Miles and Opal fly straight at the guards and tackle them to the floor before they even realize what happens. The teenagers take away the guns from the unconscious guards. Miles and Opal take off into the air again to help Malone. Meanwhile, Malone and $bat charge at the gangster, who flies on $other_bat. He kicks him off the bat's back and jumps over. Quickly, he removes the collar from $other_bat's neck, who is now free and reunites with $bat and Opal. They switch places, so that Malone continues to fly on Ares' back, while Ava flies towards Paxton on the black bat. 
+<</speech>>\
+<div class="button-row">\
+	<<button [[continue|70]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack epic-cinematic-trailer>>
+
+
+:: 69B {"position":"2950,2100","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>They wait a while for the perfect moment to perform their ambush. Dr. Malone gives the command and they both shoot off into the mine. Miles and Opal fly straight at $other_bat and tackle the gangster from $other_bat_gender_object back before the man even realizes what happens. Miles jumps over on $other_bat's back and quickly removes the collar from $other_bat_gender_object neck. $other_bat_gender_subject is now free and reunites with Opal. Meanwhile, Malone and $bat fly straight at the guards on the ground and tackle them to the floor. The teenagers take away the guns from the unconscious guards. Malone and $bat take off into the air, where they meet Miles, Opal and $other_bat. They switch places, so that Miles flies on Opal again and Malone continues to fly on Ares' back, while Ava flies towards Paxton on the black bat.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|70]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack epic-cinematic-trailer>>
+
+
+:: 6A {"position":"1900,400","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>Hey Miles, you didn't wait for me. What's up? You're making sort of a sad face. Is it because Brad tackled you?<</speech>>\
+<div class="button-row">\
+	<<button [[continue|7]]>><</button>>
+</div>
+</div>
+
+
+:: 6B {"position":"1900,600","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>What' going on? Did you fight with Brad? You should not get provoked by him that easily. That's what gives him the fun about it. Just keep a cool head and he will shut up. Why does he get you like this every time?<</speech>>\
+<div class="button-row">\
+	<<button [[continue|7]]>><</button>>
+</div>
+</div>
+
+
+:: 7 {"position":"2050,500","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Well you know, I feel like, if I didn't have this disability with my eyes, I would beat Brad and all the others, no effort. It just sucks sometimes...<</speech>>\
+<div class="button-row">\
+	<<button [[continue|8]]>><</button>>
+</div>
+</div>
+
+
+:: 70 {"position":"3100,2000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>Paxton must dodge Ava's attacks, which gives Malone and Miles the time to also take out the other two men on the brown bats. They join Ava fighting against Paxton. Down on the floor, the men who were working before are now alarmed and start shooting at Miles and Malone. They dodge the gunfire and together they take the gangsters out one by one. Miles lands next to his friends. Marah beams with joy, when she sees him.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|71]]>><</button>>
+</div>
+</div>
+
+
+:: 71 {"position":"3250,2000","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>Miles, it's so good to see you! I thought you were lost in the caves. Are you okay?<</speech>>\
+<div class="button-row">\
+	<<button [[continue|72]]>><</button>>
+</div>
+</div>
+
+
+:: 72 {"position":"3400,2000","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>It's great to see you too! Don't worry, I'm fine. Look, I even made new friends while I was away. I'm gonna tell you later. First, let's get out of here.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|73]]>><</button>>
+</div>
+</div>
+
+
+:: 73 {"position":"3550,2000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>In the air, Paxton managed to turn the tide against Ava and now chases her. He shoots from his rifle and hits Ava at the wing. Screaming, she falls to the ground. Now Paxton shoots at the two brown bats, who panic and flee from the cave. Malone shouts to Miles and his friends.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|74]]>><</button>>
+</div>
+</div>
+
+
+:: 74 {"position":"3700,2000","size":"100,100"}
+<div class="content">\
+<<speech false "Dr. Malone">>You must go now! Let me take care of Paxton.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|75]]>><</button>>
+</div>
+</div>
+
+
+:: 75 {"position":"3850,2000","size":"100,100"}
+<div class="content">\
+<<speech>>There is no time for more words, as Paxton comes flying towards them. Dr. Malone and Ares take off and are now chased by Paxton. Miles, Marah and the other teenagers run towards the elevator. It's their chance to get of the mine, but before they enter the elevator, Miles turns around and sees Malone struggling against Paxton. He gets almost shot a couple times and tries desperately to get away.<</speech>>\
+<div class="button-row">\
+	<<button [[help Malone|76]]>><</button>>
+	<<button [[enter elevator|76X]]>><</button>>
+</div>
+</div>
+
+
+:: 76 {"position":"3550,2500","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>Miles turns around and jumps on Opal's back. They take off and fly towards Malone, but before they can get to him, Malone gets hit by a gunshot. He slips down from Ares back and falls motionless towards the ground. Miles flies after him at once and Opal catches him in the air with her claws, but she is not strong enough to carry him and they all fall to the ground. At the hard impact, Miles loses his glasses and is blind. He hears Marah screaming.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|77]]>><<set $malone_alive to true>><</button>>
+</div>
+</div>
+
+
+:: 76X {"position":"3700,2900","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>Miles hesitates. He is frozen as he watches how Paxton pushes Malone more and more into a corner. There is no more escape. A shot from Paxton's gun hits Malone in the upper body. He slumps and slips from Ares' back. Miles can't see where Malone's body hits the ground, but it is certain that he is gone.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|77X]]>><<set $malone_alive to false>><</button>>
+</div>
+</div>
+
+
+:: 77 {"position":"3400,2500","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>Miles, watch out!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|78]]>><</button>>
+</div>
+</div>
+
+
+:: 77X {"position":"3550,2900","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>NOOO! I have let that happen.... Opal, you and your parents need to escape now! Fly back to your home. Don't worry about us, we will get out from where we came from.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|78X]]>><</button>>
+</div>
+</div>
+
+
+:: 78 {"position":"3250,2500","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>He gets up and feels that Opal takes him on her back and flies off with him from the ground. He can only hear Paxton chasing them and he can feel Opal’s fear.<</speech>>\
+<div class="button-row">\
+	<<if $blessing is true>>
+		<<button [[continue|79B]]>><</button>>
+    <<else>>
+    	<<button [[continue|79A]]>><</button>>
+    <</if>>
+</div>
+</div>
+
+
+:: 78X {"position":"3400,2900","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>Opal looks at him worried. Then she takes off and together with Ares and Ava she escape the cave through a tunnel in the wall. Marah and the others wait for Miles at the elevator. He runs to them and gets inside. When they arrive at the top, they immediately start running to the place where they fell through the ceiling. Miles and Brad join forces to get everyone up through the hole. They are now back in the tunnel they entered the caves. After running for a while they can see the light from the exit. But when Miles looks back he sees Paxton following them flying on the black bat. He catches up to them faster than they could reach the exit.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|79X]]>><</button>>
+</div>
+</div>
+
+
+:: 79A {"position":"3100,2400","size":"100,100"}
+<div class="content">\
+<<speech>>Desperately Miles thinks what he could do now. In his blindness, he feels weak and helpless. Only one thing comes to his mind that he can try to improve his situation. He focuses his thoughts on the images of the moonlight cave, where the crystals shined so magically. Then he tries to whistle once, twice, but he is too stressed to produce the right tone. He focuses only on his hearing, breathes in deeply and whistles a third time. Finally, he senses an echo so strong, that it triggers something in him. It's like a very blurred image popped up inside his mind. He whistles once again and the image becomes sharper. Miles can now tell how far away he is from the walls. This all happens, while he sits on Opal's back racing through the air and being chased. As his inner vision becomes sharper Miles can also sense Paxton behind them catching up.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|80]]>><</button>>
+</div>
+</div>
+
+
+:: 79B {"position":"3100,2600","size":"100,100"}
+<div class="content">\
+<<speech>>Suddenly, he remembers what the cave guardian told him. He has its blessing and in a moment of need he should trust in the power of the crystals. Right now certainly is a moment of need. He focuses his thoughts on the images of the moonlight cave, where the crystals shined so magically. A warm feeling spreads in his body. Paxton is catching up close to Miles and Opal, as suddenly the crystals on the walls glow brighter and brighter. The light becomes so intense that it blinds everyone. Miles perceives the light and also needs to close his eyes. When he opens them again he is able to see perfectly. His blindness is gone. As Miles turns around he sees that Paxton regained his composure and is catching up to them.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|80]]>><</button>>
+</div>
+</div>
+
+
+:: 79X {"position":"3250,2900","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>Oh no, what should we do now? Why can't he just leave us?<</speech>>\
+<div class="button-row">\
+	<<button [[continue|80X]]>><</button>>
+</div>
+</div>
+
+
+:: 8 {"position":"2200,500","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>Hm, yeah I get that. But you don't need to feel weak or anything. You are one of the best players in the class even with your condition. Probably Brad is only such a douche to you, because he feels threatened of you.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|9]]>><</button>>
+</div>
+</div>
+
+
+:: 80 {"position":"2950,2500","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>Before he gets into reach, Miles gives Opal to understand that she should fly a quick loop upwards. She instantly performs the maneuver and Miles jumps down from her back in the moment they fly headlong over Paxton and lands behind him on the black bat. Miles tries to snatch the gun from Paxton's hands, but he holds on tight. Miles makes a powerful push and the gun hits Paxton in his face. They both lose their balance and slip off from the bat's back falling towards the ground. Miles looks up to Opal, who tries to reach him.
+<</speech>>\
+<div class="button-row">\
+	<<if $special_move is true>>
+		<<button [[continue|80B]]>><</button>>
+    <<else>>
+    	<<button [[continue|80A]]>><</button>>
+    <</if>>
+</div>
+</div>
+
+
+:: 80A {"position":"2800,2400","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>She makes a nosedive, but she is not fast enough to get them before Miles and Paxton would hit the ground. Just a moment before they would crash, Ares comes flying out of nowhere and catches them both on his back. They land gently on the floor and Ares lets Miles down. Paxton seems to be unconscious, his face is bloody and he slips sideways from Ares' back. Miles walks over to Dr. Malone, who still lies in the same place, where they crashed together.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|81]]>><</button>>
+</div>
+</div>
+
+
+:: 80B {"position":"2800,2600","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/bat flying.png'">\
+</div>\
+<<speech true>>Opal makes a nosedive and starts spinning. She performs the drill move, Miles and her learned together. She becomes faster, reaches Miles and catches him on her back. Paxton, on the other hand, falls down to the floor unbraked. With an ugly crack he hits the ground. Opal lands next to Dr. Malone, who still lies in the same place, where they crashed together.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|81]]>><</button>>
+</div>
+</div>
+
+
+:: 80X {"position":"3100,2900","size":"100,100"}
+<div class="content">\
+<<speech false "Brad">>I think it's my fault. When we left the mine I took a crystal. Probably he wants to have it back.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|81X]]>><</button>>
+</div>
+</div>
+
+
+:: 81 {"position":"2650,2500","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Dr. Malone can you hear me? Are you okay?<</speech>>\
+<div class="button-row">\
+	<<button [[continue|82]]>><</button>>
+</div>
+</div>
+
+
+:: 81X {"position":"2950,2900","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>No, they have enough crystals. He is afraid that we gonna report them to the police. But, wait a second. Give me the crystal.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|82X]]>><</button>>
+</div>
+</div>
+
+
+:: 82 {"position":"2500,2500","size":"100,100"}
+<div class="content">\
+<<speech false "Dr. Malone">>......................... I ... I am fine ..... don't worry.... he hit me in the shoulder, but it's gonna be okay.<</speech>>\
+<div class="button-row">\
+	<<if $special_move is true>>
+		<<button [[continue|83B]]>><</button>>
+    <<else>>
+    	<<button [[continue|83]]>><</button>>
+    <</if>>
+</div>
+</div>
+
+
+:: 82X {"position":"2800,2900","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>What are you doing?<</speech>>\
+<div class="button-row">\
+	<<if $blessing is true>>
+		<<button [[continue|82Z]]>><</button>>
+    <<else>>
+    	<<button [[continue|82Y]]>><</button>>
+    <</if>>
+</div>
+</div>
+
+
+:: 82Y {"position":"2650,2800","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/hand holding crystal.png'">\
+</div>\
+<<speech true "Miles">>Dr. Malone told me that the crystal can concentrate light and amplify energy in technical devices. Give me your flashlight. I wanna try something.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|83Y]]>><</button>>
+</div>
+</div>
+
+
+:: 82Z {"position":"2650,3000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/hand holding crystal.png'">\
+</div>\
+<<speech true "Miles">>Back in the caves I met a strange being, the cave guardian. It told me to trust in the powers of the crystals when I am in a moment of need inside the caves. This certainly is a moment of need... Let me try something.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|83Z]]>><</button>>
+</div>
+</div>
+
+
+:: 83 {"position":"2350,2400","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/holding gun.png'">\
+</div>\
+<<speech true>>Suddenly, Miles gets a heavy blow to the back of his head. He falls over and lies on the ground in pain and confusion. Paxton woke up and he stands over Miles. With a bloody face, he grins maniacally down at Miles. He points his gun at Miles' face. Miles can't do anything. Then out of nowhere, Ava comes racing at them.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|84]]>><</button>>
+</div>
+</div>
+
+
+:: 83B {"position":"2350,2600","size":"100,100"}
+<div class="content">\
+<<speech>>Marah comes running to them. Miles hugs her.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|84B]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack inspiring-background>>
+
+
+:: 83Y {"position":"2500,2800","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/hand holding crystal.png'">\
+</div>\
+<<speech true>>Miles holds the crystal in front of the lightbeam and points it to the tunnel ceiliing in the direction where Paxton is coming from. But, nothing happens. Paxton comes closer every second. He pulls his gun and points it towards the teenagers. Before he can shoot, finally from the concentrated beam of the flashlight the ceiliing starts to crack. It collapses and cuts the way between Paxton and the teenagers. It seems like they were safe, but the crack spreads across the ceiliing into their direction.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|84Y]]>><</button>>
+</div>
+</div>
+
+
+:: 83Z {"position":"2500,3000","size":"100,100"}
+<div class="content-with-picture">\
+<div class="big-image">\
+	<img @src="'images/hand holding crystal.png'">\
+</div>\
+<<speech true>>Miles holds the crystal in his hands in front of his chest.  He focuses his thoughts on the images of the moonlight cave, where the crystals shined so magically. A warm feeling spreads in his body. But, nothing happens. Paxton comes closer every second. He pulls his gun and points it towards the teenagers. Before he can shoot, finally the crystal in Miles' hands starts glowing from inside. It emits are sphere of light that grows so big that it encloses the entire group of teenagers. Paxton shoots a Laser projectile from his gun at Miles. The sphere deflects the shot, which bounces back at Paxton and hits him in the chest. He falls off the bat's back and lies motionless on the ground. The teenagers remove the collar from the black bat's neck and leave the cave through the exit.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|86X]]>><</button>>
+</div>
+</div>
+
+
+:: 84 {"position":"2200,2400","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>Here catch this!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|85]]>><</button>>
+</div>
+</div>
+
+
+:: 84B {"position":"2200,2600","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>It's finally over. Now that Paxton is gone, there is nothing that we have to fear anymore... Oh look, here are your glasses.<</speech>>\
+<div class="button-row">\
+	<<if $blessing is true>>
+		<<button [[continue|88B]]>><</button>>
+    <<else>>
+    	<<button [[continue|88A]]>><</button>>
+    <</if>>
+</div>
+</div>
+
+
+:: 84Y {"position":"2350,2800","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>RUN!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|85Y]]>><</button>>
+</div>
+</div>
+
+
+:: 85 {"position":"2050,2400","size":"100,100"}
+<div class="content">\
+<<speech>>Marah sits on Ava's back. She throws one of the control collars that the bats wore towards Miles. He catches it and puts it on Paxton's leg immediately. His grin freezes, his eyes become empty and he drops his gun. Marah lands next to them. Miles hugs her.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|86]]>><</button>>
+</div>
+</div>
+
+
+:: 85Y {"position":"2200,2800","size":"100,100"}
+<div class="content">\
+<<speech>>They run for their lives, while the ceiling collapses little by little. Finally, they reach the exit and are free.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|86X]]>><</button>>
+</div>
+</div>
+
+
+:: 86 {"position":"1900,2400","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Wow, that was awesome! You are the best, thank you!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|87]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack inspiring-background>>
+
+
+:: 86X {"position":"2050,2900","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Wow, that was close! I didn't expect all of this to happen, when we first entered the caves. What a crazy trip. Let's finally go home.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|89]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack inspiring-background>>
+
+
+:: 87 {"position":"1750,2400","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>You're welcome! Everyone needs some help sometimes. Oh look, here are your glasses.<</speech>>\
+<div class="button-row">\
+	<<if $blessing is true>>
+		<<button [[continue|88B]]>><</button>>
+    <<else>>
+    	<<button [[continue|88A]]>><</button>>
+    <</if>>
+</div>
+</div>
+
+
+:: 88A {"position":"1750,2600","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Thanks. I managed to find a way to orientate myself without them, like the bats do. But of course, it's not as good as seeing properly... I didn't expect all of this to happen, when we first entered the caves. What a crazy trip. Let's finally go home.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|89]]>><</button>>
+</div>
+</div>
+
+
+:: 88B {"position":"1900,2600","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Thanks. I actually don't need them anymore, I can see normally now! I didn't expect all of this to happen, when we first entered the caves. What a crazy trip. Let's finally go home.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|89]]>><</button>>
+</div>
+</div>
+
+
+:: 89 {"position":"1750,3300","size":"100,100"}
+<div class="content">\
+<<speech>>Another day. It’s aeroball class again. This time Miles makes no solo runs but is a real teamplayer. Especially with Marah he plays well together and they help each other. After the game they talk in the hallway.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|90]]>><</button>>
+</div>
+</div>
+
+
+:: 9 {"position":"2350,500","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>....... well, anyways, I am going to the caves tonight with some friends. You should join us!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|10]]>><</button>>
+</div>
+</div>
+
+
+:: 90 {"position":"1900,3300","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>That was amazing! Best game we ever played. Your last goal was incredible!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|91]]>><</button>>
+</div>
+</div>
+
+
+:: 91 {"position":"2050,3300","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>Only because you gave me the assist! You played brilliantly.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|92]]>><</button>>
+</div>
+</div>
+
+
+:: 92 {"position":"2200,3300","size":"100,100"}
+<div class="content">\
+<<speech>>A classmate passes by. He asks them if it's true what is in the news. All the gangster were arrested and the illegal mine was shut down.<</speech>>\
+<div class="button-row">\
+	<<if $malone_alive is true>>
+		<<button [[continue|93]]>><</button>>
+    <<else>>
+    	<<button [[continue|94]]>><</button>>
+    <</if>>
+</div>
+</div>
+
+
+:: 93 {"position":"2350,3200","size":"100,100"}
+<div class="content">\
+<<speech>>Malone confessed about being involved in the crimes and was arrested too. But his sentence is low because he helped taking the gangsters down.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|94]]>><</button>>
+</div>
+</div>
+
+
+:: 94 {"position":"2500,3300","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>Hey, did you see the flyers for the school dance? It's in two weeks. Do you have a companion already? Because, you know, I am still waiting for someone to ask me.<</speech>>\
+<div class="button-row">\
+	<<button [[continue|95]]>><</button>>
+</div>
+</div>
+
+
+:: 95 {"position":"2650,3300","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Uhm, no I don't have anyone yet. So, uh, would you like to... go together? ... With me?<</speech>>\
+<div class="button-row">\
+	<<button [[continue|96]]>><</button>>
+</div>
+</div>
+
+
+:: 96 {"position":"2800,3300","size":"100,100"}
+<div class="content">\
+<<speech false "Marah">>I would love to! So, let's go together... you and me... Uhm, okay, I need to go. See you later!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|97]]>><</button>>
+</div>
+</div>
+
+
+:: 97 {"position":"2950,3300","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Great! Yeah, see you!<</speech>>\
+<div class="button-row">\
+	<<button [[continue|98]]>><</button>>
+</div>
+</div>
+
+
+:: 98 {"position":"3100,3300","size":"100,100"}
+<div class="content">\
+<<speech>>Miles is overjoyed. At home his dad notices his good mood. "Hey buddy, nice to see you so happy. Did you maybe forgot, that you are grounded for sneaking out and getting yourself into all that danger?"<</speech>>\
+<div class="button-row">\
+	<<button [[continue|99]]>><</button>>
+</div>
+</div>
+
+
+:: 99 {"position":"3250,3300","size":"100,100"}
+<div class="content">\
+<<speech false "Miles">>Yeah, about that... I am really sorry, I won't do anything like that ever again. But could I please still go to the school dance in two weeks? It is really important for me. Look, I am going with Marah and I think I really like her. So, please?<</speech>>\
+<div class="button-row">\
+	<<button [[continue|100]]>><</button>>
+</div>
+</div>
+
+
+:: ABORTED [abort] {"position":"2900,300","size":"100,100"}
+<div class="content">\
+<div class="end-screen">\
+	<h1>ADVENTURE ABORTED</h1>
+</div>\
+<div class="button-row">\
+	<<button [[Back to start|0]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack crushed-dreams>>
+
+
+:: DEATH [death] {"position":"700,1200","size":"100,100"}
+<div class="content">\
+<div class="end-screen">\
+	<h1>YOU DIED</h1>
+</div>\
+<div class="button-row">\
+	<<button [[Back to start|0]]>><</button>>
+</div>
+</div>
+
+<<PlayTrack crushed-dreams>>
+
+
+:: END [happy-end] {"position":"900,3300","size":"100,100"}
+<div class="content">\
+<div class="end-screen">\
+	<h1>THE END</h1>
+</div>\
+<div class="button-row">\
+	<<button [[Back to start|0]]>><</button>>
+</div>
+</div>
+
+
+:: PassageReady {"position":"800,300","size":"100,100"}
+<<script>>
+    setup.showChoiceButtons();
+<</script>>
+
+
+:: StoryCaption {"position":"650,300","size":"100,100"}
+Volume: <<volume>>
+
+
+:: StoryInit {"position":"500,300","size":"100,100"}
+<<script>>
+	// set tab icon
+	// New style (again, can use various image formats, PNG is probably your best bet here)
+;(function () {
+	var favicon  = document.createElement("link");
+	favicon.rel  = "icon";
+	favicon.type = "png";
+	favicon.href = "images/crystal.png";
+	document.head.appendChild(favicon);
+}());
+
+// collapse side bar
+UIBar.stow();
+<</script>>
+
+<<replace "#credits">>
+Credits:
+Robert Metzinger
+Mariana Sarmento
+Cláudio Gonçalves
+Javier del Rio
+
+Illustrations by Mariana Sarmento
+
+Background from getty images by Tatyana Khanko
+
+Music:
+
+Adventure Travel by <a href="https://pixabay.com/users/alexiaction-26977400/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=128404">AlexiAction</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=128404">Pixabay</a>
+
+Crushed dreams by <a href="https://pixabay.com/users/samuelfrancisjohnson-1207793/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=11536">SamuelFrancisJohnson</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=11536">Pixabay</a>
+
+Deep Space Adventure - Sci-Fi Orchestra by <a href="https://pixabay.com/users/juliush-3921568/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=1258">JuliusH</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=1258">Pixabay</a>
+
+Epic Cinematic Trailer - Adventure Action Tense Suspenseful by <a href="https://pixabay.com/users/soundgalleryby-21339672/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=122445">SoundGalleryBy</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=122445">Pixabay</a>
+
+Inspiring Background by <a href="https://pixabay.com/users/skilsel-22933514/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=7380">Skilsel</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=7380">Pixabay</a>
+
+Otherwoldly Orchestra by <a href="https://pixabay.com/users/alfred_grupstra-4379051/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=123981">Alfred_Grupstra</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=123981">Pixabay</a>
+
+Reflected light - by <a href="https://pixabay.com/users/sergepavkinmusic-6130722/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=147979">SergePavkinMusic</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=147979">Pixabay</a>
+
+Space Atmospheric Background by <a href="https://pixabay.com/users/lvymusic-27953103/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=124841">lvymusic</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=124841">Pixabay</a>
+
+Stairs into the Unknown - Dark Piano Music by <a href="https://pixabay.com/users/juliush-3921568/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=1497">JuliusH</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=1497">Pixabay</a>
+<</replace>>
+
+
+:: custom widgets [widget nobr] {"position":"350,300","size":"100,100"}
+<<widget "speech" container>>
+	<div class="speech-box">
+    	<<if _args[1]>>
+        	<img class="speech-image" @src="'images/' + _args[1].toLowerCase().replace(/[^a-z]/g, '') + '.png'">
+		<</if>>
+    	<div class="speech-content">
+			<<if _args[1]>>
+				<div class="speech-title">
+					<p><b>_args[1]</b></p>
+                	<hr/>
+ 				</div>
+			<</if>>
+			<div class="speech-message">
+				<<set $counter to 0>>
+				<<set $texts to setup.stringToArray(_contents, _args[1] !== undefined, (_args[0] !== undefined && _args[0]))>>
+				<span id = "display-text">$texts[$counter]</span>
+			</div>    
+		</div>
+	</div>
+	<div class="speech-button-row">
+   		<<if $texts.length >1>>
+         	<<script>>
+          		setup.showSpeechButtons();
+			<</script>>
+			<span id="next-button">
+			<<button "next">>
+				<<set $counter to $counter +1>>
+               	<<replace "#display-text">>$texts[$counter]<</replace>>
+				<<if $counter >= $texts.length - 1>>
+					<<script>>
+    					setup.showChoiceButtons();
+					<</script>>
+				<</if>>
+			<</button>>
+			</span>
+        <</if>>
+	</div>
+<</widget>>
+
+
+/* PlayTrack: Safely plays audio files in track list. */
+/* Usage: <<PlayTrack start_bgm>>                     */
+<<widget "PlayTrack">>
+	<<set _trackList = {  /* Add your track IDs and filenames below. */
+        "deep-space-adventure" : "deep-space-adventure-sci-fi-orchestra-1258.mp3",
+        "space-atmospheric-background" : "space-atmospheric-background-124841.mp3",
+        "stairs-into-the-unknown" : "stairs-into-the-unknown-dark-piano-music-1497.mp3",
+        "adventure-travel" : "adventure-travel-128404.mp3",
+        "reflected-light" : "reflected-light-147979.mp3",
+        "epic-cinematic-trailer" : "epic-cinematic-trailer-adventure-action-tense-suspenseful-122445.mp3",
+        "otherwoldly-orchestra" : "otherwoldly-orchestra-123981.mp3",
+        "inspiring-background" : "inspiring-background-7380.mp3",
+        "crushed-dreams" : "crushed-dreams-11536.mp3"
+	}>>
+	<<set _nextTrack = $args.raw>>
+	<<if def _trackList[_nextTrack]>>
+		<<if !TrackExists(_nextTrack)>>  /* If track doesn't exist, load it. */
+			<<set _bgm = setup.SoundPath + _trackList[_nextTrack]>>
+			<<cacheaudio _nextTrack _bgm>>
+		<</if>>
+		<<if !TrackExists(_nextTrack)>>
+			<<run alert('Error: Cannot load file "' + setup.SoundPath + _trackList[_nextTrack] + '".')>>
+		<<else>>
+			<<if !isPlaying(_nextTrack)>>  /* If track isn't already playing, play it. */
+                <<audio _nextTrack play volume 0.1 loop>>
+                <<audio _nextTrack fadeoverto 2 1>>
+                <<if setup.currentTrack !== undefined>>
+					<<audio setup.currentTrack fadeoverto 2 0>>
+                	<<timed 2s>>
+                		<<audio setup.currentTrack stop>>
+                	<</timed>>
+                <</if>>
+                <<timed 2s>>
+                	<<set setup.currentTrack to _nextTrack>>
+                <</timed>>
+			<</if>>
+		<</if>>
+	<<else>>
+		<<run alert('Error: Unknown track "' + _nextTrack + '".')>>
+	<</if>>
+<</widget>>
+
+
+:: layout [header] {"position":"200,300","size":"100,100"}
+<video autoplay muted loop id="myVideo">
+  <source src="images/luxovola-ambient.mp4" type="video/mp4">
+</video>
+
+
+:: StoryScript [script]
+$('<div id="luxovola-layout"></div>').insertBefore(document.body);
+
+$("<div id='credits'></div>").insertAfter($("#menu"));
+
+setup.stringToArray = function(textIn, isDialogue, hasPicture) {
+  var charCounter = 0;
+  var textArr = [];
+  var maxLen = 1390;
+  if (!hasPicture && isDialogue) {
+    maxLen = 920;
+  }
+  if (hasPicture && !isDialogue) {
+    maxLen = 550;
+  }
+  if (hasPicture && isDialogue) {
+    maxLen = 350;
+  }
+  console.log(maxLen);
+  while (charCounter < textIn.length) {
+    var nextWords = "";
+    if (textIn.length <= charCounter + maxLen) nextWords = textIn.substring(charCounter);
+    else nextWords = textIn.substring(charCounter, textIn.lastIndexOf(" ", charCounter + maxLen));
+    textArr.push(nextWords);
+    charCounter += nextWords.length;
+  }
+  return textArr;
+}
+
+
+setup.showSpeechButtons = function() {
+  setTimeout(()=> {
+  	$(".speech-button-row").css("display", "flex");
+  	$(".button-row").css("display", "none");
+  })
+}
+
+setup.showChoiceButtons = function() {
+  setTimeout(()=> {
+  	$(".speech-button-row").css("display", "none");
+  	$(".button-row").css("display", "flex");
+  })
+}
+
+
+
+if (document.location.href.toLowerCase().includes("/temp/") || document.location.href.toLowerCase().includes("/private/") || hasOwnProperty.call(window, "storyFormat")) {
+	// Change this to the path where the HTML file is
+	// located if you want to run this from inside Twine.
+	setup.Path = "C:\Users\Robert\OneDrive\Desktop\Master\Semester2\Interactive Narratives\luxovola/";  // Running inside Twine application
+} else { 
+	setup.Path = "";  // Running in a browser
+}
+setup.ImagePath = setup.Path + "images/";
+setup.SoundPath = setup.Path + "sounds/";
+
+
+
+window.onload = function() {
+  console.log("onload")
+  var context = new AudioContext();
+}
+
+// Check to see if trackID is currently loaded
+window.TrackExists = function (trackID) {
+	return SimpleAudio.tracks.has(trackID);
+};
+
+// Check to see if trackID is the currently playing track
+window.isPlaying = function (trackID) {
+	var track = SimpleAudio.tracks.get(trackID);
+	return track !== null && track.isPlaying();
+};
+
+
+(function () {
+	// Set initial values.
+	var options = {
+		current  : 50,  // Default volume level.
+		rangeMax : 100,
+		step	 : 1,
+		setting  : true
+	};
+	Setting.load();
+	if (options.setting && settings.volume) {
+		options.current = parseInt(settings.volume);
+	}
+	var vol = {
+		last: options.current,
+		start: (options.current / options.rangeMax).toFixed(2)
+	};
+
+	// Function to update the volume level.
+	function setVolume (val) {
+		if (typeof val !== 'number') val = Number(val);
+		if (Number.isNaN(val) || val < 0) val = 0;
+		if (val > 1) val = 1;
+		options.current = Math.round(val * options.rangeMax);
+		if (options.setting) {
+			settings.volume = options.current;
+			Setting.save();
+		}
+		if ($('input[name=volume]').val() != options.current) {
+			$('input[name=volume]').val(options.current);
+		}
+		try {
+			if (SimpleAudio) {
+				if (typeof SimpleAudio.volume === 'function') {
+					SimpleAudio.volume(val);
+				} else {
+					SimpleAudio.volume = val;
+				}
+				return val;
+			} else {
+				throw new Error('Cannot access audio API.');
+			}
+		} catch (err) {
+			// Fall back to the wikifier if we have to.
+			console.error(err.message, err);
+			$.wiki('<<masteraudio volume ' + val + '>>');
+			return val;
+		}
+	}
+
+	// Fix the initial volume level display.
+	postdisplay['volume-task'] = function (taskName) {
+		delete postdisplay[taskName];
+		setVolume(vol.start);
+	};
+
+	// Grab volume level changes from the volume slider.
+	$(document).on('input', 'input[name=volume]', function() {
+		var change = parseInt($('input[name=volume]').val());
+		setVolume(change / options.rangeMax);
+		vol.last = change;
+	});
+
+	// Create the <<volume>> macro.
+	Macro.add('volume', {
+		handler : function () {
+			var wrapper = $(document.createElement('span'));
+			var slider = $(document.createElement('input'));
+			var className = 'macro-' + this.name;
+			slider.attr({
+				id		: 'volume-control',
+				type	: 'range',
+				name	: 'volume',
+				min		: '0',
+				max		: options.rangeMax,
+				step	: options.step,
+				value	: options.current
+			});
+			// Class '.macro-volume' and ID '#volume-control' for styling the slider
+			wrapper.append(slider).addClass(className).appendTo(this.output);
+		}
+	});
+
+	// Add Setting API integration for SugarCube 2.26 and higher.
+	function updateVolume () {
+		setVolume(settings.volume / options.rangeMax);
+	}
+	if (options.setting) {
+		if (Setting && Setting.addRange && typeof Setting.addRange === 'function') {
+			Setting.addRange('volume', {
+				label : 'Volume: ',
+				min : 0,
+				max : options.rangeMax,
+				step : options.step,
+				default : options.current,
+				onInit : updateVolume,
+				onChange : updateVolume
+			});
+		} else {
+			console.error('This version of SugarCube does not include the `Settings.addRange()` method; please try updating to the latest version of SugarCube.');
+		}
+	}
+}());
+
+:: StoryStylesheet [stylesheet]
+body { 
+  font-family: Quicksand,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: url(images/crystal.png) 8 8, auto;
+}
+
+#luxovola-layout { 
+  cursor: url(images/crystal.png) 8 8, auto;
+}
+
+#luxovola-layout .macro-timed-insert {
+	transition-duration: 3s;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#title-page {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: url(images/crystal.png) 8 8, auto;
+}
+
+#title-page a {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: url(images/crystal.png) 8 8, auto;
+}
+
+/* Add some content at the bottom of the video/page */
+.title-screen {
+  position: fixed;
+  display: flex;
+  margin: auto;
+  margin-top: 175px;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  align-items: center;
+  	
+}
+
+#title-img {
+  width: 80%;
+  height: 100%;
+}
+
+#start-game-btn-parent {
+  display: flex;
+  justify-content: center;
+}
+
+#start-game-btn button {
+  font-size: 36px;
+  letter-spacing: 0.4em;
+  padding: 28px;
+}
+
+#start-game-btn .macro-timed-insert {
+	transition-duration: 3s;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  color: lightcyan;
+  padding: 20px;
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: 75%;
+  border: 10px solid black;
+  border-radius: 15px;
+}
+
+.content-with-picture {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  color: lightcyan;
+  padding: 20px;
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: 75%;
+  border: 10px solid black;
+  border-radius: 15px;
+}
+
+.big-image {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.button-row {
+  justify-content: center;
+  display: flex;
+}
+
+
+button {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 20px;
+  padding: 12px 16px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+button:hover {
+  background-image: linear-gradient(#B384C9, #391F5B 50%);
+  cursor: url(images/crystal-glow.png) 8 8, auto;
+}
+
+.speech-box {
+  display: flex;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.content .speech-box {
+  height: 80%;
+}
+
+.content-with-picture .speech-box {
+  height: 33%;
+}
+
+.content .speech-image {
+  width: 200px;
+  height: 200px;
+}
+
+.content-with-picture .speech-image {
+  width: 175px;
+  height: 175px;
+}
+
+.speech-content {
+  display: block;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.speech-title {
+  width: 100%;
+}
+
+.speech-title p {
+  margin: 0;
+}
+
+.speech-title hr {
+  margin: 0.5em 0;
+}
+
+.speech-button-row {
+  display: flex;
+  justify-content: center;
+}
+
+.end-screen {
+  display: flex;
+  justify-content: center;
+}
+
+/* Used to align label for volume slider */
+input[type=range] {
+	vertical-align: middle;
+}
